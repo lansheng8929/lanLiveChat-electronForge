@@ -1,0 +1,34 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.viewContainer {
+  height: 20vw;
+  font-size: 10vw;
+  padding: 2vw;
+  box-sizing: border-box;
+}
+
+.danmuContainer {
+  flex: 1;
+  overflow-y: scroll;
+  // scroll-bahavior: smooth;
+  /* 隐藏 Chrome、Safari 和 Opera 的滚动条 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /* 隐藏 IE、Edge 和 Firefox 的滚动条 */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  .danmuMsg {
+    max-height: 10vh;
+    font-size: 3vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+}
